@@ -1,0 +1,6 @@
+services:
+  py-env:
+    build: .
+    volumes:
+      - "./:/workspace/"
+    command: "python src/test.py"
