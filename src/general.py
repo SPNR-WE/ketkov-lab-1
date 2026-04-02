@@ -35,13 +35,3 @@ class SetCoveringProblem:
         samples = np.random.normal(loc=self.c_mean, scale=self.c_std, size=(k, self.n))
         samples = np.abs(samples) # в распределении могут быть отрицательные веса, обработаем их через модуль
         return samples
-
-    def f(self, x: np.ndarray, c: np.ndarray) -> float:
-        return float(np.dot(c, x))
-
-    def f_saa(self, x: np.ndarray, c_samples: np.ndarray) -> tuple[float, float]:
-        costs = np.dot(c_samples, x)
-        return float(np.mean(costs)), float(np.std(costs))
-
-    def is_covered(self, x: np.ndarray) -> bool:
-        return bool(np.all(np.dot(self.A, x) >= 1))
