@@ -60,7 +60,7 @@ def draw_plots(exp_name: str, config: dict, results: dict):
 
     # выравниваем и сохраняем картинку
     plt.tight_layout()
-    plt.savefig(f"report/images/{exp_name}.png")
+    plt.savefig(f"report/stochastic_images/{exp_name}.png")
     plt.close()
 
 
