@@ -1,9 +1,9 @@
 import numpy as np
 
 class SetCoveringProblem:
-    def __init__(self, m: int, n: int, density: float = 0.2, seed: int = 42):
-        np.random.seed(seed)
-
+    def __init__(self, m: int, n: int, density: float = 0.2, seed: int = None):
+        if seed is not None:
+            np.random.seed(seed)
         self.m = m # число покрываемых элементов
         self.n = n # число множеств
         self.density = density # плотность покрываемых элементов (чем выше, тем больше элементов покрывает каждое множество)
