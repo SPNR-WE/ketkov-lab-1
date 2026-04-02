@@ -128,7 +128,7 @@ $$
 Мы берем решение $\tilde{x}^{*}_{\mathrm{RN}}$, оптимизированное только под средние затраты, вычисляем для него истинный CVaR на большой выборке и делим на эталонный оптимум $z^{*}_{\mathrm{RA}}$:
 
 $$
-\rho_{\mathrm{RN \to RA}} = \frac{\min_t \left\{ t + \frac{1}{1-\alpha} \mathbb{E}_{\mathbb{P}^{*}} [ \max(c^\top \tilde{x}^{*}_{\mathrm{RN}} - t, 0) ] \right\}}{z^{*}_{\mathrm{RA}}} \ge \rho_{\mathrm{out}}^{\mathrm{RA}} \ge 1
+\rho_{\mathrm{RN \to RA}} = \frac{\min_t \{ t + \frac{1}{1-\alpha} \mathbb{E}_{\mathbb{P}^{*}} [ \max(c^\top \tilde{x}^{*}_{\mathrm{RN}} - t, 0) ] \}}{z^{*}_{\mathrm{RA}}} \ge \rho_{\mathrm{out}}^{\mathrm{RA}} \ge 1
 $$
 
 **Использование риск-аверсного решения для оценки средних затрат (RA $\to$ RN):**
