@@ -69,6 +69,21 @@ $$\mu \ge 0, \quad \nu_j \ge 0, \quad x_j \in \{0, 1\}$$
 
 *(Примечание: в таблицу включены ключевые срезы n для демонстрации трендов).*
 
+**base_case** (m=10, d=0.3, Γ_true=0.6n)
+
+![base_case curves n=50](robust_images/base_case_curves_n_50.png)
+![base_case time](robust_images/base_case_time.png)
+
+**high_density** (m=10, d=0.7, Γ_true=0.6n)
+
+![high_density curves n=50](robust_images/high_density_curves_n_50.png)
+![high_density time](robust_images/high_density_time.png)
+
+**high_uncertainty** (m=10, d=0.3, Γ_true=0.9n)
+
+![high_uncertainty curves n=50](robust_images/high_uncertainty_curves_n_50.png)
+![high_uncertainty time](robust_images/high_uncertainty_time.png)
+
 ### 2.4 Анализ и выводы по робастному подходу
 
 1. **Производительность**: Как и ожидалось, время вычислений крайне мало. Для максимального рассмотренного размера (n=50) время не превышает 0.01 секунды. Рост времени с увеличением n присутствует, но остается в рамках сотых долей секунды благодаря эффективности MILP-переформулировки.
@@ -116,6 +131,46 @@ $$z_s \geq \bigl(c^{(s)}\bigr)^\top x - t, \quad s = 1, \ldots, k$$
 | **alpha_0_99** ($\alpha$=0.99)            | 50  | 0.0214       | 0.0686       | 0.2741 ± 4.26  | 2.0614 ± 3.79 | 0.5932  | 12.6314 |
 
 *(Примечание: представлены агрегированные срезы из полной таблицы для наглядности).*
+
+**base_case** (m=20, d=0.2, α=0.9)
+
+![base_case stochastic](stochastic_images/base_case.png)
+
+**m_10** (m=10)
+
+![m_10](stochastic_images/m_10.png)
+
+**m_30** (m=30, d=0.2, α=0.9)
+
+![m_30](stochastic_images/m_30.png)
+
+**alpha_0_6** (α=0.6)
+
+![alpha_0_6](stochastic_images/alpha_0_6.png)
+
+**alpha_0_95** (α=0.95)
+
+![alpha_0_95](stochastic_images/alpha_0_95.png)
+
+**alpha_0_99** (α=0.99)
+
+![alpha_0_99](stochastic_images/alpha_0_99.png)
+
+**density_0_1** (d=0.1)
+
+![density_0_1](stochastic_images/density_0_1.png)
+
+**density_0_7** (d=0.7)
+
+![density_0_7](stochastic_images/density_0_7.png)
+
+**hardcore_risk**
+
+![hardcore_risk](stochastic_images/hardcore_risk.png)
+
+**trivial_case**
+
+![trivial_case](stochastic_images/trivial_case.png)
 
 ### 3.4 Анализ и выводы по стохастическому подходу
 
