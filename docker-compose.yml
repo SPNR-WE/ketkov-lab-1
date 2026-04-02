@@ -1,6 +1,12 @@
 services:
-  py-env:
+  robust:
     build: .
     volumes:
       - "./:/workspace/"
-    command: "python src/test.py"
+    command: "python experiments/robust_run.py"
+
+  stochastic:
+    build: .
+    volumes:
+      - "./:/workspace/"
+    command: "python experiments/stochastic_run.py"

@@ -1,0 +1,60 @@
+# Общие параметры, которые не меняются
+common_parameters: &common
+  n_values: [5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
+  k_samples: 30
+  problems: 100
+
+experiments:
+  base_case:
+    <<: *common
+    m: 20
+    density: 0.2
+    alpha: 0.9
+
+  m_10:
+    <<: *common
+    m: 10
+    density: 0.2
+    alpha: 0.9
+
+  m_30:
+    <<: *common
+    m: 30
+    density: 0.2
+    alpha: 0.9
+
+  density_0_1:
+    <<: *common
+    m: 20
+    density: 0.1
+    alpha: 0.9
+
+  density_0_7:
+    <<: *common
+    m: 20
+    density: 0.7
+    alpha: 0.9
+
+  alpha_0_95:
+    <<: *common
+    m: 20
+    density: 0.2
+    alpha: 0.95
+
+  alpha_0_99:
+    <<: *common
+    m: 20
+    density: 0.2
+    alpha: 0.99
+
+  hardcore_risk:
+    <<: *common
+    m: 30
+    density: 0.1
+    alpha: 0.99
+
+  trivial_case:
+    <<: *common
+    m: 10
+    density: 0.7
+    alpha: 0.9
