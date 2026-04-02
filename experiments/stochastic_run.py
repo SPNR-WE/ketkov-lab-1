@@ -16,7 +16,7 @@ np.random.seed(42)
 
 def draw_plots(exp_name: str, config: dict, results: dict):
     # создаем папку для сохранения графиков
-    os.makedirs("report/images", exist_ok=True)
+    os.makedirs("report/stochastic_images", exist_ok=True)
 
     # собираем фигуру с тремя графиками в ряд
     fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(18, 5))
@@ -60,7 +60,7 @@ def draw_plots(exp_name: str, config: dict, results: dict):
 
     # выравниваем и сохраняем картинку
     plt.tight_layout()
-    plt.savefig(f"report/images/{exp_name}.png")
+    plt.savefig(f"report/stochastic_images/{exp_name}.png")
     plt.close()
 
 

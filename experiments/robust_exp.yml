@@ -1,0 +1,27 @@
+# Общие параметры
+common_parameters: &common
+  n_values: [5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
+  m_fixed: 10
+  n_instances: 50
+  n_oos_scenarios: 30
+  density: 0.3
+  c_bar_low: 1
+  c_bar_high: 100
+  c_hat_low: 20
+  c_hat_high: 80
+  gamma_true_frac: 0.6
+  gamma_fixed: 10
+
+experiments:
+  base_case:
+    <<: *common
+
+  high_density:
+    <<: *common
+    density: 0.7
+
+  high_uncertainty:
+    <<: *common
+    gamma_true_frac: 0.9
+    c_hat_low: 50
+    c_hat_high: 150

@@ -4,3 +4,4 @@ PuLP
 pyyaml
 matplotlib
 tqdm
+gurobipy
